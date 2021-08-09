@@ -1,4 +1,5 @@
 import json
+import discord
 from discord.ext import commands
 
 with open('config.json') as f:
@@ -14,9 +15,15 @@ class Help(commands.Cog):
         print("Help Cog ready")
     
     @commands.command()
-    @commands.has_any_role(admin)
     async def help(self, ctx):
-        await ctx.send('This command is for help')
+        author = ctx.message.author
+
+        embed = discord.Embed(colour = discord.Color.blue())
+
+        embed.set_author(name="Digilab")
+        embed.add_field(name='Information', value="This is content")
+
+        await ctx.send(author, embed=embed)
 
 def setup(client):
     client.add_cog(Help(client))
