@@ -9,7 +9,7 @@ with open('config.json') as f:
     data = json.load(f)
     token = data["TOKEN"]
     prefix = data["PREFIX"]
-    admin = data["ADMIN_ROLE"]
+    
 
 client = commands.Bot(command_prefix=prefix, help_command=None)
 
