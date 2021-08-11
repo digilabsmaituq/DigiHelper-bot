@@ -3,12 +3,12 @@ import os
 import discord
 from discord.ext import commands
 
-with open('user.json', 'r') as f:
+with open('bot.json', 'r') as f:
     data = json.load(f)
 
-ceo = data["CEO"]
-coo = data["COO"]
-cfo = data["CFO"]
+ceo = data["CORE"]["CEO"]
+coo = data["CORE"]["COO"]
+cfo = data["CORE"]["CFO"]
 
 class Info(commands.Cog):
     def __init__(self, client):

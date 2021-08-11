@@ -15,7 +15,7 @@ class Digifest(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print("DIGIFEST 2021 Ready")
-
+ 
     @commands.command()
     async def digifest(self, ctx):
         embed = discord.Embed(title=f"DIGIFEST {year}", description=desc, color=0x00d1e0)

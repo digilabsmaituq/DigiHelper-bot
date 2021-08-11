@@ -6,7 +6,9 @@ from discord.ext import commands
 with open('config.json') as f:
     data = json.load(f)
     admin = data["ADMIN_ROLE"]
+    py = data["OS"]
 
+    
 class Add(commands.Cog):
     def __init__(self, client):
        self.client = client
@@ -22,7 +24,7 @@ class Add(commands.Cog):
             with open('user.json', 'r') as f:
                 data = json.load(f)
 
-            data["CEO"] = name
+            data["CORE"]["CEO"] = name
 
             with open("user.json", "w") as f:
                 json.dump(data, f, indent= 4)
@@ -32,7 +34,7 @@ class Add(commands.Cog):
             with open('user.json', 'r') as f:
                 data = json.load(f)
 
-            data["COO"] = name
+            data["CORE"]["COO"] = name
 
             with open("user.json", "w") as f:
                 json.dump(data, f, indent= 4)
@@ -42,13 +44,13 @@ class Add(commands.Cog):
             with open('user.json', 'r') as f:
                 data = json.load(f)
 
-            data["CFO"] = name
+            data["CORE"]["CFO"] = name
 
             with open("user.json", "w") as f:
                 json.dump(data, f, indent= 4)
             await ctx.send("Added")
 
-        os.system('python3 bot.py')
+        os.system(f"{py} bot.py")
 
     @commands.command()
     @commands.has_any_role(admin)

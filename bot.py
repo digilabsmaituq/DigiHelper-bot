@@ -8,6 +8,9 @@ status = cycle(['DIGIFEST 2021', 'Use d!help for more information'])
 with open('config.json') as f:
     data = json.load(f)
     token = data["TOKEN"]
+
+with open("prefix.json") as f:
+    data = json.load(f)
     prefix = data["PREFIX"]
 
 client = commands.Bot(command_prefix=prefix, help_command=None)
