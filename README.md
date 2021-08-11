@@ -8,11 +8,12 @@ pip install discord.py
 If you already have discord.py installed, create a `config.json` file on the bot folder and write this down:
 ```
 {
-  "TOKEN": <Bot's token. Ask our team for the token.>
-  "PREFIX": "d!"
-  "ADMIN_ROLE": <Ask our team about the administrator on our Discord Server>
+  "TOKEN": "",
+  "ADMIN_ROLE": "",
+  "OS": ""
 }
 ```
+> Please ask our team members about the token and admin role. For the "OS" key, use "python3" value if you are using Linux, and "python" if you are using Windows.
 
 ## Features
 - Displaying information about Digilab.
