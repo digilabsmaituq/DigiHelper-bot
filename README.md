@@ -6,7 +6,7 @@ pip install discord.py
 ```
 
 If you already have discord.py installed, create a `config.json` file on the bot folder and write this down:
-```
+```json
 {
   "TOKEN": "",
   "ADMIN_ROLE": "",
