@@ -3,7 +3,7 @@ import os
 import discord
 from discord.ext import commands
 
-with open('config.json') as f: 
+with open('config.json') as f:
     data = json.load(f)
     admin = data["ADMIN_ROLE"]
 
@@ -14,7 +14,7 @@ class Add(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print("insert Cog ready")
-    
+
     @commands.command()
     @commands.has_any_role(admin)
     async def insert(self, ctx, args, *,name:str):
@@ -23,7 +23,7 @@ class Add(commands.Cog):
                 data = json.load(f)
 
             data["CEO"] = name
-        
+
             with open("user.json", "w") as f:
                 json.dump(data, f, indent= 4)
             await ctx.send("Added")
@@ -33,7 +33,7 @@ class Add(commands.Cog):
                 data = json.load(f)
 
             data["COO"] = name
-        
+
             with open("user.json", "w") as f:
                 json.dump(data, f, indent= 4)
             await ctx.send("Added")
@@ -43,7 +43,7 @@ class Add(commands.Cog):
                 data = json.load(f)
 
             data["CFO"] = name
-        
+
             with open("user.json", "w") as f:
                 json.dump(data, f, indent= 4)
             await ctx.send("Added")

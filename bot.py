@@ -9,7 +9,6 @@ with open('config.json') as f:
     data = json.load(f)
     token = data["TOKEN"]
     prefix = data["PREFIX"]
-    
 
 client = commands.Bot(command_prefix=prefix, help_command=None)
 

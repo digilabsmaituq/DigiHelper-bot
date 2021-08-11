@@ -17,15 +17,16 @@ class Info(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print("Info Cog ready")
-    
+
     @commands.command()
     async def info(self, ctx):
-        
+
         embed=discord.Embed(title="About Digilab", description="An IT community based on Ummul Quro Bogor Islamic High School. This is a place where students from Ummul Quro High School could improve or learn new IT skills.")
         embed.set_thumbnail(url="https://media.discordapp.net/attachments/865094112725303346/865094478360870942/digilab_logo2.png?width=462&height=462")
         embed.add_field(name="CEO", value=ceo, inline=True)
         embed.add_field(name="CFO", value=cfo, inline=True)
         embed.add_field(name="COO", value=coo, inline=True)
+        embed.add_field(name="DIGIFEST 2021", value="For more information about DIGIFEST 2021, please use d!digifest.")
         embed.set_footer(text="DIgilab 2021/2020")
 
         await ctx.send(embed=embed)
