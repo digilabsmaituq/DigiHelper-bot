@@ -1,6 +1,5 @@
 {
-    "DIGIFEST": 
-    {
+    "DIGIFEST": {
         "YEAR": "2021",
         "DESC": "DIGIFEST is a tech event in Ummul Quro Islamic Highschool for those who wants to master their tech skills and join our community.",
         "IMG": "https://media.discordapp.net/attachments/865094112725303346/867300841105915924/DIGIFEST_LOGO.png?width=853&height=480"
@@ -8,7 +7,7 @@
     "PREFIX": "d!",
     "CORE": {
         "CEO": "Muhammad Naufal Afif",
-        "CFO": "Hanif Muhammad",
-        "COO": "Bimo Ramadhan"
+        "CFO": "Hanif Muhammad F",
+        "COO": "Muhammad Bimo Ramadhan"
     }
 }

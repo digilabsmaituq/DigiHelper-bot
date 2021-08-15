@@ -1,6 +1,5 @@
 import json
 import os
-import discord
 from discord.ext import commands
 
 with open('config.json') as f:
@@ -20,36 +19,23 @@ class Add(commands.Cog):
     @commands.command()
     @commands.has_any_role(admin)
     async def insert(self, ctx, args, *,name:str):
-        if args == "ceo":
-            with open('user.json', 'r') as f:
-                data = json.load(f)
+        with open('bot.json', 'r') as f:
+            data = json.load(f)
 
+        if args == "ceo":
             data["CORE"]["CEO"] = name
 
-            with open("user.json", "w") as f:
-                json.dump(data, f, indent= 4)
-            await ctx.send("Added")
-
         if args == "coo":
-            with open('user.json', 'r') as f:
-                data = json.load(f)
-
             data["CORE"]["COO"] = name
 
-            with open("user.json", "w") as f:
-                json.dump(data, f, indent= 4)
-            await ctx.send("Added")
-
         if args == "cfo":
-            with open('user.json', 'r') as f:
-                data = json.load(f)
-
             data["CORE"]["CFO"] = name
 
-            with open("user.json", "w") as f:
-                json.dump(data, f, indent= 4)
-            await ctx.send("Added")
+        with open("bot.json", "w") as f:
+            json.dump(data, f, indent= 4)
 
+        await ctx.send("Added")
+        
         os.system(f"{py} bot.py")
 
     @commands.command()

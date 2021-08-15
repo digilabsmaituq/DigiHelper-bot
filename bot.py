@@ -9,7 +9,7 @@ with open('config.json') as f:
     data = json.load(f)
     token = data["TOKEN"]
 
-with open("prefix.json") as f:
+with open("bot.json") as f:
     data = json.load(f)
     prefix = data["PREFIX"]
 

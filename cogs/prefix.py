@@ -16,12 +16,12 @@ class Prefix(commands.Cog):
     
     @commands.command()
     async def prefix(self, ctx, prefix):
-        with open('prefix.json', 'r') as f:
+        with open('bot.json', 'r') as f:
                 data = json.load(f)
 
         data["PREFIX"] = prefix
 
-        with open("prefix.json", "w") as f:
+        with open("bot.json", "w") as f:
             json.dump(data, f, indent= 4)
         await ctx.send(f"Prefix changed to {prefix}")
 

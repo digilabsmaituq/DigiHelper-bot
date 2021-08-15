@@ -2,7 +2,7 @@ import json
 import discord
 from discord.ext import commands
 
-with open("digifest.json") as f:
+with open("bot.json") as f:
     data = json.load(f)
     year = data["DIGIFEST"]["YEAR"]
     desc = data["DIGIFEST"]["DESC"]
