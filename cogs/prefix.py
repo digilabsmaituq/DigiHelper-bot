@@ -5,6 +5,7 @@ from discord.ext import commands
 with open("config.json") as f:
     data = json.load(f)
     py = data["OS"]
+    admin = data["ADMIN_ROLE"]
 
 class Prefix(commands.Cog):
     def __init__(self, client):
@@ -15,6 +16,7 @@ class Prefix(commands.Cog):
         print("Prefix changer ready")
     
     @commands.command()
+    @commands.has_any_role(admin)
     async def prefix(self, ctx, prefix):
         with open('bot.json', 'r') as f:
                 data = json.load(f)
